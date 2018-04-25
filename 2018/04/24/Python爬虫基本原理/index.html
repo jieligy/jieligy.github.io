@@ -88,7 +88,7 @@
 <meta property="og:description" content="什么是爬虫？爬虫即网络爬虫，英文名称为Web Spider。译为网络蜘蛛。如果把整个互联网看作一张超大蜘蛛网，那么Spoider便是在这张大网上爬来爬去的蜘蛛，遇到需要的猎物，便把它扒下来。网络爬虫通过向网站发起请求，获取资源后分析并提取有用的数据请求。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2018/04/26/5ae0c421bbfbe.png">
-<meta property="og:updated_time" content="2018-04-25T19:36:01.607Z">
+<meta property="og:updated_time" content="2018-04-25T20:07:12.419Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习——爬虫基本原理">
 <meta name="twitter:description" content="什么是爬虫？爬虫即网络爬虫，英文名称为Web Spider。译为网络蜘蛛。如果把整个互联网看作一张超大蜘蛛网，那么Spoider便是在这张大网上爬来爬去的蜘蛛，遇到需要的猎物，便把它扒下来。网络爬虫通过向网站发起请求，获取资源后分析并提取有用的数据请求。">
@@ -364,22 +364,25 @@
       
 
       
-        <h3 id="什么是爬虫？"><a href="#什么是爬虫？" class="headerlink" title="什么是爬虫？"></a>什么是爬虫？</h3><p>爬虫即网络爬虫，英文名称为Web Spider。译为网络蜘蛛。如果把整个互联网看作一张超大蜘蛛网，那么Spoider便是在这张大网上爬来爬去的蜘蛛，遇到需要的猎物，便把它扒下来。<br>网络爬虫通过向网站发起请求，获取资源后分析并提取有用的数据请求。 <a id="more"></a></p>
-<p>###爬虫的基本流程 ###<br><img src="https://i.loli.net/2018/04/26/5ae0c421bbfbe.png" alt="enter image description here"></p>
-<ol>
-<li><p>发起请求<br>通过使用http库向目标网站发起请求，既发送一个Request。Request包含了请求头、请求体等信息等待服务器响应。就如我们在地址栏输入：<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 回车访问时。这一过程就是向服务端发送了一次请求。</p>
+        <h1 id="什么是爬虫？"><a href="#什么是爬虫？" class="headerlink" title="什么是爬虫？"></a>什么是爬虫？</h1><p>爬虫即网络爬虫，英文名称为Web Spider。译为网络蜘蛛。如果把整个互联网看作一张超大蜘蛛网，那么Spoider便是在这张大网上爬来爬去的蜘蛛，遇到需要的猎物，便把它扒下来。<br>网络爬虫通过向网站发起请求，获取资源后分析并提取有用的数据请求。 <a id="more"></a></p>
+<h1 id="爬虫的基本流程"><a href="#爬虫的基本流程" class="headerlink" title="爬虫的基本流程"></a>爬虫的基本流程</h1><p><img src="https://i.loli.net/2018/04/26/5ae0c421bbfbe.png" alt="enter image description here"></p>
+<h2 id="1-发起请求"><a href="#1-发起请求" class="headerlink" title="1. 发起请求"></a>1. 发起请求</h2><p> 通过使用http库向目标网站发起请求，既发送一个Request。Request包含了请求头、请求体等信息等待服务器响应。就如我们在地址栏输入：<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 回车访问时。这一过程就是向服务端发送了一次请求。</p>
+<h2 id="2-获取响应正内容"><a href="#2-获取响应正内容" class="headerlink" title="2. 获取响应正内容"></a>2. 获取响应正内容</h2><p> 如果服务器能正常响应，则会得到一个Request。Request包含了html，json，图片视频(二进制数据)。</p>
+<h2 id="3-解析内容"><a href="#3-解析内容" class="headerlink" title="3. 解析内容"></a>3. 解析内容</h2><p> 获取的内容可能是html，可使用正则表达式，第三方库如Beautifulsoup<br> 进行解析。也有可能是json，可以用json模块解析。还有可能是二进制数据，可以做保存和进一步处理，如已b的方式写入文件。</p>
+<h2 id="4-保存数据"><a href="#4-保存数据" class="headerlink" title="4. 保存数据"></a>4. 保存数据</h2><p> 保存方式可以为：文本或是数据库</p>
+<h1 id="Request-请求"><a href="#Request-请求" class="headerlink" title="Request(请求)"></a>Request(请求)</h1><h2 id="什么是Request"><a href="#什么是Request" class="headerlink" title="什么是Request"></a>什么是Request</h2><p> 用户通过浏览器发送信息给网址所在的服务器，这个过程就较重HTTP Request。 </p>
+<h2 id="Request中包含什么"><a href="#Request中包含什么" class="headerlink" title="Request中包含什么"></a>Request中包含什么</h2><ul>
+<li><p>请求方式<br>常用的请求方式：GET,POST(其它还有：HEAD,PUT,DELETE,OPTHONS)<br>GET请求的参数直接放在URL的后面，而POST的请求方式则放在请求体内（可用开发者工具查看，存放在form data内）</p>
 </li>
-<li><p>获取响应正内容<br>如果服务器能正常响应，则会得到一个Request。Request包含了html，json，图片视频(二进制数据)。</p>
+<li><p>请求URL<br>URL全称统一资源定位符，也就是我们所说的网址，如一个网页文档，一张图片，一个音乐文件我们都可以用唯一的URL来确定，它包含的信息指出文件的位置以及浏览器应该怎么去处理它。</p>
 </li>
-<li><p>解析内容<br>获取的内容可能是html，可使用正则表达式，第三方库如Beautifulsoup<br>进行解析。也有可能是json，可以用json模块解析。还有可能是二进制数据，可以做保存和进一步处理，如已b的方式写入文件。</p>
-</li>
-<li><p>保存数据<br>保存方式可以为：文本或是数据库</p>
-<h3 id="Request-请求"><a href="#Request-请求" class="headerlink" title="Request(请求)"></a>Request(请求)</h3><p>什么是Request<br>用户通过浏览器发送信息给网址所在的服务器，这个过程就较重HTTP Request。</p>
-</li>
-</ol>
-<p>Request包含什么</p>
-<p><strong>请求方式</strong><br>常用的请求方式：GET,POST(其它还有：HEAD,PUT,DELETE,OPTHONS)<br>GET请求的参数直接放在URL的后面，而POST的请求方式则放在请求体内（可用开发者工具查看，存放在form data内）</p>
-<p><strong>请求URL</strong><br>URL全称统一资源定位符，也就是我们所说的网址，如一个网页文档，一张图片，一个音乐文件我们都可以用唯一的URL来确定，它包含的信息指出文件的位置以及浏览器应该怎么去处理它。<br> 请求头<br> Request Headers(请求头): 包含请求时的头部信息，如User-Agent(指定浏览器的请求头)，如果没有User-Agent客户端配置，服务端可能将你当作非法用户。host，cookies(用来保存登录信息)等信息。一般爬虫都会加上请求头。<br> <strong>请求体</strong><br>请求体：请求额外携带的数据，如登录表单提交的登陆信息数据。</p>
+<li>请求头<br>Request Headers(请求头): 包含请求时的头部信息，如User-Agent(指定浏览器的请求头)，如果没有User-Agent客户端配置，服务端可能将你当作非法用户。host，cookies(用来保存登录信息)等信息。一般爬虫都会加上请求头。</li>
+<li>请求体<br>请求体：请求额外携带的数据，如登录表单提交的登陆信息数据。<h1 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h1><h2 id="什么是Response？"><a href="#什么是Response？" class="headerlink" title="什么是Response？"></a>什么是Response？</h2></li>
+<li>服务器接受到浏览器发送的信息后，能根据所发送信息的内容做出相应的处理，然后把消息传回给浏览器，这一过程叫做HTPP Response。<h2 id="Response中包含什么？"><a href="#Response中包含什么？" class="headerlink" title="Response中包含什么？"></a>Response中包含什么？</h2></li>
+<li>响应状态：200代表成功；301代表跳转；404代表页面不存在；403代表权限；502代表服务器错误。</li>
+<li>Response headers(响应头)：内容类型、长度，服务器信息，设置cooike等</li>
+<li>preview(响应体): 最主要的部分，包含了请求资源的内容。如网页html，图片二进制数据等。</li>
+</ul>
 
       
     </div>
@@ -609,7 +612,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是爬虫？"><span class="nav-number">1.</span> <span class="nav-text">什么是爬虫？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Request-请求"><span class="nav-number">2.</span> <span class="nav-text">Request(请求)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是爬虫？"><span class="nav-number">1.</span> <span class="nav-text">什么是爬虫？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#爬虫的基本流程"><span class="nav-number">2.</span> <span class="nav-text">爬虫的基本流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-发起请求"><span class="nav-number">2.1.</span> <span class="nav-text">1. 发起请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-获取响应正内容"><span class="nav-number">2.2.</span> <span class="nav-text">2. 获取响应正内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-解析内容"><span class="nav-number">2.3.</span> <span class="nav-text">3. 解析内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-保存数据"><span class="nav-number">2.4.</span> <span class="nav-text">4. 保存数据</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Request-请求"><span class="nav-number">3.</span> <span class="nav-text">Request(请求)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Request"><span class="nav-number">3.1.</span> <span class="nav-text">什么是Request</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Request中包含什么"><span class="nav-number">3.2.</span> <span class="nav-text">Request中包含什么</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Response"><span class="nav-number">4.</span> <span class="nav-text">Response</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Response？"><span class="nav-number">4.1.</span> <span class="nav-text">什么是Response？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Response中包含什么？"><span class="nav-number">4.2.</span> <span class="nav-text">Response中包含什么？</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -637,7 +640,7 @@
   <span class="author" itemprop="copyrightHolder">李杰</span>
   <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共644字</span>
+  <span class="post-count">博客全站共795字</span>
 </div>
 
   
