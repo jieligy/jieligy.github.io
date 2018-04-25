@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Python," />
 
 
 
@@ -79,14 +79,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="李杰的博客">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="什么是爬虫？爬虫即网络爬虫，英文名称为Web Spider。译为网络蜘蛛。如果把整个互联网看作一张超大蜘蛛网，那么Spoider便是在这张大网上爬来爬去的蜘蛛，遇到需要的猎物，便把它扒下来。网络爬虫通过向网站发起请求，获取资源后分析并提取有用的数据请求。">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python学习——爬虫基本原理">
+<meta property="og:url" content="http://yoursite.com/2018/04/24/Python爬虫基本原理/index.html">
 <meta property="og:site_name" content="李杰的博客">
+<meta property="og:description" content="什么是爬虫？爬虫即网络爬虫，英文名称为Web Spider。译为网络蜘蛛。如果把整个互联网看作一张超大蜘蛛网，那么Spoider便是在这张大网上爬来爬去的蜘蛛，遇到需要的猎物，便把它扒下来。网络爬虫通过向网站发起请求，获取资源后分析并提取有用的数据请求。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-21T19:33:36.517Z">
+<meta property="og:image" content="https://i.loli.net/2018/04/26/5ae0c421bbfbe.png">
+<meta property="og:updated_time" content="2018-04-25T19:36:01.607Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="李杰的博客">
+<meta name="twitter:title" content="Python学习——爬虫基本原理">
+<meta name="twitter:description" content="什么是爬虫？爬虫即网络爬虫，英文名称为Web Spider。译为网络蜘蛛。如果把整个互联网看作一张超大蜘蛛网，那么Spoider便是在这张大网上爬来爬去的蜘蛛，遇到需要的猎物，便把它扒下来。网络爬虫通过向网站发起请求，获取资源后分析并提取有用的数据请求。">
+<meta name="twitter:image" content="https://i.loli.net/2018/04/26/5ae0c421bbfbe.png">
 
 
 
@@ -116,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/24/Python爬虫基本原理/"/>
 
 
 
 
 
-  <title>分类 | 李杰的博客</title>
+  <title>Python学习——爬虫基本原理 | 李杰的博客</title>
   
 
 
@@ -257,40 +263,236 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/24/Python爬虫基本原理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李杰">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李杰的博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 1 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">Python学习——爬虫基本原理</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-24T04:44:32+08:00">
+                2018-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h3 id="什么是爬虫？"><a href="#什么是爬虫？" class="headerlink" title="什么是爬虫？"></a>什么是爬虫？</h3><p>爬虫即网络爬虫，英文名称为Web Spider。译为网络蜘蛛。如果把整个互联网看作一张超大蜘蛛网，那么Spoider便是在这张大网上爬来爬去的蜘蛛，遇到需要的猎物，便把它扒下来。<br>网络爬虫通过向网站发起请求，获取资源后分析并提取有用的数据请求。 <a id="more"></a></p>
+<p>###爬虫的基本流程 ###<br><img src="https://i.loli.net/2018/04/26/5ae0c421bbfbe.png" alt="enter image description here"></p>
+<ol>
+<li><p>发起请求<br>通过使用http库向目标网站发起请求，既发送一个Request。Request包含了请求头、请求体等信息等待服务器响应。就如我们在地址栏输入：<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 回车访问时。这一过程就是向服务端发送了一次请求。</p>
+</li>
+<li><p>获取响应正内容<br>如果服务器能正常响应，则会得到一个Request。Request包含了html，json，图片视频(二进制数据)。</p>
+</li>
+<li><p>解析内容<br>获取的内容可能是html，可使用正则表达式，第三方库如Beautifulsoup<br>进行解析。也有可能是json，可以用json模块解析。还有可能是二进制数据，可以做保存和进一步处理，如已b的方式写入文件。</p>
+</li>
+<li><p>保存数据<br>保存方式可以为：文本或是数据库</p>
+<h3 id="Request-请求"><a href="#Request-请求" class="headerlink" title="Request(请求)"></a>Request(请求)</h3><p>什么是Request<br>用户通过浏览器发送信息给网址所在的服务器，这个过程就较重HTTP Request。</p>
+</li>
+</ol>
+<p>Request包含什么</p>
+<p><strong>请求方式</strong><br>常用的请求方式：GET,POST(其它还有：HEAD,PUT,DELETE,OPTHONS)<br>GET请求的参数直接放在URL的后面，而POST的请求方式则放在请求体内（可用开发者工具查看，存放在form data内）</p>
+<p><strong>请求URL</strong><br>URL全称统一资源定位符，也就是我们所说的网址，如一个网页文档，一张图片，一个音乐文件我们都可以用唯一的URL来确定，它包含的信息指出文件的位置以及浏览器应该怎么去处理它。<br> 请求头<br> Request Headers(请求头): 包含请求时的头部信息，如User-Agent(指定浏览器的请求头)，如果没有User-Agent客户端配置，服务端可能将你当作非法用户。host，cookies(用来保存登录信息)等信息。一般爬虫都会加上请求头。<br> <strong>请求体</strong><br>请求体：请求额外携带的数据，如登录表单提交的登陆信息数据。</p>
+
       
     </div>
     
     
     
+
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+<div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>请博主吃包辣条</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="李杰 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="李杰 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/22/《红豆》/" rel="next" title="《红豆》">
+                <i class="fa fa-chevron-left"></i> 《红豆》
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -299,6 +501,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -319,8 +525,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -384,6 +599,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是爬虫？"><span class="nav-number">1.</span> <span class="nav-text">什么是爬虫？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Request-请求"><span class="nav-number">2.</span> <span class="nav-text">Request(请求)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
