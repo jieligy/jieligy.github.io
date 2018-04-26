@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Python,爬虫," />
+  <meta name="keywords" content="Python,爬虫,Requests," />
 
 
 
@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="什么是爬虫？爬虫即网络爬虫，英文名称为Web Spider。译为网络蜘蛛。如果把整个互联网看作一张超大蜘蛛网，那么Spoider便是在这张大网上爬来爬去的蜘蛛，遇到需要的猎物，便把它扒下来。网络爬虫通过向网站发起请求，获取资源后分析并提取有用的数据请求。">
-<meta name="keywords" content="Python,爬虫">
+<meta name="description" content="什么是Requests库？Requests库是用Python编写的，基于urllib，采用Apache2 Licensed 开源协议的HTTP库。相比urllib库，Requests库更加方便，可以节约我们大量的工作，完全满足HTTP测试需求。 参考：Requests库中文文档  ； 高级用法 安装pip install request">
+<meta name="keywords" content="Python,爬虫,Requests">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python学习——爬虫基本原理">
-<meta property="og:url" content="http://yoursite.com/2018/04/24/Python爬虫基本原理/index.html">
+<meta property="og:title" content="Python爬虫之Requests库的基本用法">
+<meta property="og:url" content="http://yoursite.com/2018/04/25/Python爬虫之Requests库的基本用法/index.html">
 <meta property="og:site_name" content="李杰的博客">
-<meta property="og:description" content="什么是爬虫？爬虫即网络爬虫，英文名称为Web Spider。译为网络蜘蛛。如果把整个互联网看作一张超大蜘蛛网，那么Spoider便是在这张大网上爬来爬去的蜘蛛，遇到需要的猎物，便把它扒下来。网络爬虫通过向网站发起请求，获取资源后分析并提取有用的数据请求。">
+<meta property="og:description" content="什么是Requests库？Requests库是用Python编写的，基于urllib，采用Apache2 Licensed 开源协议的HTTP库。相比urllib库，Requests库更加方便，可以节约我们大量的工作，完全满足HTTP测试需求。 参考：Requests库中文文档  ； 高级用法 安装pip install request">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2018/04/26/5ae0c421bbfbe.png">
-<meta property="og:updated_time" content="2018-04-25T22:17:32.197Z">
+<meta property="og:image" content="https://i.loli.net/2018/04/27/5ae2127369300.png">
+<meta property="og:updated_time" content="2018-04-26T18:12:42.964Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python学习——爬虫基本原理">
-<meta name="twitter:description" content="什么是爬虫？爬虫即网络爬虫，英文名称为Web Spider。译为网络蜘蛛。如果把整个互联网看作一张超大蜘蛛网，那么Spoider便是在这张大网上爬来爬去的蜘蛛，遇到需要的猎物，便把它扒下来。网络爬虫通过向网站发起请求，获取资源后分析并提取有用的数据请求。">
-<meta name="twitter:image" content="https://i.loli.net/2018/04/26/5ae0c421bbfbe.png">
+<meta name="twitter:title" content="Python爬虫之Requests库的基本用法">
+<meta name="twitter:description" content="什么是Requests库？Requests库是用Python编写的，基于urllib，采用Apache2 Licensed 开源协议的HTTP库。相比urllib库，Requests库更加方便，可以节约我们大量的工作，完全满足HTTP测试需求。 参考：Requests库中文文档  ； 高级用法 安装pip install request">
+<meta name="twitter:image" content="https://i.loli.net/2018/04/27/5ae2127369300.png">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/24/Python爬虫基本原理/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/25/Python爬虫之Requests库的基本用法/"/>
 
 
 
 
 
-  <title>Python学习——爬虫基本原理 | 李杰的博客</title>
+  <title>Python爬虫之Requests库的基本用法 | 李杰的博客</title>
   
 
 
@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/24/Python爬虫基本原理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/25/Python爬虫之Requests库的基本用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李杰">
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python学习——爬虫基本原理</h1>
+          <h1 class="post-title" itemprop="name headline">Python爬虫之Requests库的基本用法</h1>
         
 
         <div class="post-meta">
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-24T04:44:32+08:00">
-                2018-04-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-25T22:43:15+08:00">
+                2018-04-25
               </time>
             
 
@@ -345,8 +345,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/24/Python爬虫基本原理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/24/Python爬虫基本原理/" itemprop="commentCount"></span>
+                <a href="/2018/04/25/Python爬虫之Requests库的基本用法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/25/Python爬虫之Requests库的基本用法/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -374,25 +374,63 @@
       
 
       
-        <h1 id="什么是爬虫？"><a href="#什么是爬虫？" class="headerlink" title="什么是爬虫？"></a>什么是爬虫？</h1><p>爬虫即网络爬虫，英文名称为Web Spider。译为网络蜘蛛。如果把整个互联网看作一张超大蜘蛛网，那么Spoider便是在这张大网上爬来爬去的蜘蛛，遇到需要的猎物，便把它扒下来。<br>网络爬虫通过向网站发起请求，获取资源后分析并提取有用的数据请求。 <a id="more"></a></p>
-<h1 id="爬虫的基本流程"><a href="#爬虫的基本流程" class="headerlink" title="爬虫的基本流程"></a>爬虫的基本流程</h1><p><img src="https://i.loli.net/2018/04/26/5ae0c421bbfbe.png" alt="enter image description here"></p>
-<h2 id="1-发起请求"><a href="#1-发起请求" class="headerlink" title="1. 发起请求"></a>1. 发起请求</h2><p> 通过使用http库向目标网站发起请求，既发送一个Request。Request包含了请求头、请求体等信息等待服务器响应。就如我们在地址栏输入：<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 回车访问时。这一过程就是向服务端发送了一次请求。</p>
-<h2 id="2-获取响应正内容"><a href="#2-获取响应正内容" class="headerlink" title="2. 获取响应正内容"></a>2. 获取响应正内容</h2><p> 如果服务器能正常响应，则会得到一个Request。Request包含了html，json，图片视频(二进制数据)。</p>
-<h2 id="3-解析内容"><a href="#3-解析内容" class="headerlink" title="3. 解析内容"></a>3. 解析内容</h2><p> 获取的内容可能是html，可使用正则表达式，第三方库如Beautifulsoup<br> 进行解析。也有可能是json，可以用json模块解析。还有可能是二进制数据，可以做保存和进一步处理，如已b的方式写入文件。</p>
-<h2 id="4-保存数据"><a href="#4-保存数据" class="headerlink" title="4. 保存数据"></a>4. 保存数据</h2><p> 保存方式可以为：文本或是数据库</p>
-<h1 id="Request-请求"><a href="#Request-请求" class="headerlink" title="Request(请求)"></a>Request(请求)</h1><h2 id="什么是Request"><a href="#什么是Request" class="headerlink" title="什么是Request"></a>什么是Request</h2><p> 用户通过浏览器发送信息给网址所在的服务器，这个过程就较重HTTP Request。 </p>
-<h2 id="Request中包含什么"><a href="#Request中包含什么" class="headerlink" title="Request中包含什么"></a>Request中包含什么</h2><ul>
-<li><p>请求方式<br>常用的请求方式：GET,POST(其它还有：HEAD,PUT,DELETE,OPTHONS)<br>GET请求的参数直接放在URL的后面，而POST的请求方式则放在请求体内（可用开发者工具查看，存放在form data内）</p>
-</li>
-<li><p>请求URL<br>URL全称统一资源定位符，也就是我们所说的网址，如一个网页文档，一张图片，一个音乐文件我们都可以用唯一的URL来确定，它包含的信息指出文件的位置以及浏览器应该怎么去处理它。</p>
-</li>
-<li>请求头<br>Request Headers(请求头): 包含请求时的头部信息，如User-Agent(指定浏览器的请求头)，如果没有User-Agent客户端配置，服务端可能将你当作非法用户。host，cookies(用来保存登录信息)等信息。一般爬虫都会加上请求头。</li>
-<li>请求体<br>请求体：请求额外携带的数据，如登录表单提交的登陆信息数据。<h1 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h1><h2 id="什么是Response？"><a href="#什么是Response？" class="headerlink" title="什么是Response？"></a>什么是Response？</h2></li>
-<li>服务器接受到浏览器发送的信息后，能根据所发送信息的内容做出相应的处理，然后把消息传回给浏览器，这一过程叫做HTPP Response。<h2 id="Response中包含什么？"><a href="#Response中包含什么？" class="headerlink" title="Response中包含什么？"></a>Response中包含什么？</h2></li>
-<li>响应状态：200代表成功；301代表跳转；404代表页面不存在；403代表权限；502代表服务器错误。</li>
-<li>Response headers(响应头)：内容类型、长度，服务器信息，设置cooike等</li>
-<li>preview(响应体): 最主要的部分，包含了请求资源的内容。如网页html，图片二进制数据等。</li>
-</ul>
+        <h1 id="什么是Requests库？"><a href="#什么是Requests库？" class="headerlink" title="什么是Requests库？"></a>什么是Requests库？</h1><p>Requests库是用Python编写的，基于urllib，采用Apache2 Licensed 开源协议的HTTP库。相比urllib库，Requests库更加方便，可以节约我们大量的工作，完全满足HTTP测试需求。</p>
+<p>参考：<a href="http://cn.python-requests.org/zh_CN/latest/user/quickstart.html" target="_blank" rel="noopener">Requests库中文文档</a>  ； <a href="http://cn.python-requests.org/zh_CN/latest/user/advanced.html#advanced" target="_blank" rel="noopener">高级用法</a></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><pre><code>pip install request 
+</code></pre> <a id="more"></a>
+<h1 id="Requests用法"><a href="#Requests用法" class="headerlink" title="Requests用法"></a>Requests用法</h1><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><pre><code>import requests
+r = requests.get(&apos;http://www.baidu.com/&apos;)
+print(r.status_code)  #请求状态码
+print(r.url)          #获取请求的url
+print(r.cookies)     #获取请求的cookie
+print(r.content)     #获取二进制内容
+</code></pre><blockquote>
+<p>r.status_code #响应状态码<br>r.raw #返回原始响应体，也就是 urllib 的 response 对象，使用 r.raw.read() 读取<br>r.content #字节方式的响应体，会自动为你解码 gzip 和 deflate 压缩<br>r.text #字符串方式的响应体，会自动根据响应头部的字符编码进行解码<br>r.headers #以字典对象存储服务器响应头，但是这个字典比较特殊，字典键不区分大小写，若键不存在则返回None</p>
+</blockquote>
+<p>#<em>特殊方法</em>#<br>r.json() #Requests中内置的JSON解码器<br>r.raise_for_status() #失败请求(非200响应)抛出异常</p>
+<p>运行结果：<br>    200<br>    <a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a><br>    &lt;RequestsCookieJar[<cookie bdorz="27315" for="" .baidu.com="">]&gt;</cookie></p>
+<pre><code>#....html网页源码...
+</code></pre><h2 id="各种请求方式-HTTP测试网站：http-httpbin-org"><a href="#各种请求方式-HTTP测试网站：http-httpbin-org" class="headerlink" title="各种请求方式(HTTP测试网站：http://httpbin.org/)"></a>各种请求方式(HTTP测试网站：<a href="http://httpbin.org/" target="_blank" rel="noopener">http://httpbin.org/</a>)</h2><pre><code>import requests
+requests.get(&apos;http://httpbin.org/&apos;)  #发送get请求
+requests.post(&apos;http://httpbin.org/&apos;)  #发送post请求
+requests.put(&apos;http://httpbin.org/&apos;)
+requests.delete(&apos;http://httpbin.org/&apos;)
+</code></pre><h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2><p>基于GET请求</p>
+<pre><code>import requests
+response = requests.get(&apos;http://httpbin.org/get&apos;)
+print(response.text)
+</code></pre><p>发送一个get请求，并打印返回的内容<br>还可以进行带参数的请求：</p>
+<pre><code>import requests
+data = {&apos;username&apos;:&apos;jieli&apos;,&apos;password&apos;:&apos;112233445566&apos;}
+response = requests.get(&apos;http://httpbin.org/get&apos;,params=data)
+print(response.text)
+</code></pre><p>把需要传入的参数数据生成一个字典然后调用params参数，    然后赋值即可。<br>post请求也是一样。</p>
+<h2 id="读取二进制"><a href="#读取二进制" class="headerlink" title="读取二进制"></a>读取二进制</h2><p>比如图片</p>
+<pre><code>import requests
+r = requests.get(&apos;http://www.baidu.com/img/baidu_jgylogo3.gif&apos;)
+print(r.content)    #content 是获取的图片页面源码，二进制数据
+print(r.text)      #text 则是字符串代码
+</code></pre><p>显然获取图片这种二进制数据，需要使用content方法<br>我们还可以保存图片</p>
+<pre><code>with open(&apos;logo3.gif&apos;&apos;,wb&apos;) as f:
+    f.write(r.content)
+    print(&apos;下载成功！&apos;)
+</code></pre><p>这样我们就保存了图片，在我们的文件夹中就可以看到。</p>
+<h2 id="解析json"><a href="#解析json" class="headerlink" title="解析json"></a>解析json</h2><pre><code>import requests
+import json
+r = requests.get(&apos;http://httpbin.org/get&apos;)
+print(type(r))
+print(json.loads(r.text))
+print(r.json())
+print(type(r.json()))
+</code></pre><p>运行结果<br><img src="https://i.loli.net/2018/04/27/5ae2127369300.png" alt="enter description here"><br>可以看出requests的 json 解析和 json的loads方法解析出来的都是同样的字典<br>所以说requests可以很方便的解析json数据。</p>
+<h2 id="headers"><a href="#headers" class="headerlink" title="headers"></a>headers</h2><p>有时候我们访问一些网页，它会查看请求的对象是不是来源于浏览器，如果不是，它就会禁止我们爬虫的访问，所以，我们需要添加一个headers。<br>也就是user-agent信息。</p>
+<pre><code>import requests
+data = {&apos;username&apos;:&apos;jieli&apos;,&apos;password&apos;:&apos;1122334&apos;}
+headers = {&apos;Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36&apos;}
+r = requests.get(&apos;http://httpbin.org/&apos;,data= data,headers=headers)
+print(r.text)
+</code></pre><h2 id="基于post请求"><a href="#基于post请求" class="headerlink" title="基于post请求"></a>基于post请求</h2><p>我们只需要调用post方法就可以了，当然 form data是必然不可少的，传入一个data参数就可以了。</p>
+<p>暂时就用到这么多，后续接触的多来再来补上~<br>加油~</p>
 
       
     </div>
@@ -454,6 +492,8 @@
           
             <a href="/tags/爬虫/" rel="tag"><i class="fa fa-tag"></i> 爬虫</a>
           
+            <a href="/tags/Requests/" rel="tag"><i class="fa fa-tag"></i> Requests</a>
+          
         </div>
       
 
@@ -480,8 +520,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/22/《红豆》/" rel="next" title="《红豆》">
-                <i class="fa fa-chevron-left"></i> 《红豆》
+              <a href="/2018/04/24/Python爬虫基本原理/" rel="next" title="Python学习——爬虫基本原理">
+                <i class="fa fa-chevron-left"></i> Python学习——爬虫基本原理
               </a>
             
           </div>
@@ -489,10 +529,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/25/Python爬虫之Requests库的基本用法/" rel="prev" title="Python爬虫之Requests库的基本用法">
-                Python爬虫之Requests库的基本用法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -631,7 +667,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是爬虫？"><span class="nav-number">1.</span> <span class="nav-text">什么是爬虫？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#爬虫的基本流程"><span class="nav-number">2.</span> <span class="nav-text">爬虫的基本流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-发起请求"><span class="nav-number">2.1.</span> <span class="nav-text">1. 发起请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-获取响应正内容"><span class="nav-number">2.2.</span> <span class="nav-text">2. 获取响应正内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-解析内容"><span class="nav-number">2.3.</span> <span class="nav-text">3. 解析内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-保存数据"><span class="nav-number">2.4.</span> <span class="nav-text">4. 保存数据</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Request-请求"><span class="nav-number">3.</span> <span class="nav-text">Request(请求)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Request"><span class="nav-number">3.1.</span> <span class="nav-text">什么是Request</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Request中包含什么"><span class="nav-number">3.2.</span> <span class="nav-text">Request中包含什么</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Response"><span class="nav-number">4.</span> <span class="nav-text">Response</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Response？"><span class="nav-number">4.1.</span> <span class="nav-text">什么是Response？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Response中包含什么？"><span class="nav-number">4.2.</span> <span class="nav-text">Response中包含什么？</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是Requests库？"><span class="nav-number">1.</span> <span class="nav-text">什么是Requests库？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Requests用法"><span class="nav-number">3.</span> <span class="nav-text">Requests用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number">3.1.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种请求方式-HTTP测试网站：http-httpbin-org"><span class="nav-number">3.2.</span> <span class="nav-text">各种请求方式(HTTP测试网站：http://httpbin.org/)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求"><span class="nav-number">3.3.</span> <span class="nav-text">请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读取二进制"><span class="nav-number">3.4.</span> <span class="nav-text">读取二进制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解析json"><span class="nav-number">3.5.</span> <span class="nav-text">解析json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#headers"><span class="nav-number">3.6.</span> <span class="nav-text">headers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于post请求"><span class="nav-number">3.7.</span> <span class="nav-text">基于post请求</span></a></li></ol></li></ol></div>
             
 
           </div>
